@@ -1,4 +1,5 @@
 from state import State
+import random
 
 class Agent():
     def __init__(self, state: State) -> None:
@@ -11,4 +12,4 @@ class Agent():
         self.state = new_state
     
     def pick_value(self):
-        return self.state.get_random_value()
+        return random.choice(self.state.dist)
